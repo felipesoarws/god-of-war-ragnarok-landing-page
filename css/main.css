@@ -9,6 +9,10 @@
   list-style-type: none;
 }
 
+img {
+  width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -20,10 +24,6 @@ html::-webkit-scrollbar {
 html::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px white;
           box-shadow: inset 0 0 6px white;
-}
-
-img {
-  width: 100%;
 }
 
 body {
@@ -315,5 +315,230 @@ body main .synopsis-content p {
   font-size: 0.8rem;
   line-height: 2;
   font-family: "Montserrat", sans-serif;
+}
+
+body main .gallery-desktop {
+  position: relative;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  body main .gallery-desktop {
+    display: block;
+  }
+}
+
+body main .gallery-desktop .bg {
+  height: 100vh;
+  background: url(../images/gallery_3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -20rem;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body main .gallery-desktop .bg::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.1) -webkit-gradient(linear, left bottom, left top, from(black), to(transparent));
+  background: rgba(0, 0, 0, 0.1) linear-gradient(to top, black, transparent);
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+@media (min-width: 425px) {
+  body main .gallery-desktop .bg {
+    background-position: -16rem;
+  }
+}
+
+@media (min-width: 695px) {
+  body main .gallery-desktop .bg {
+    background-position: -8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  body main .gallery-desktop .bg {
+    background-position: -1rem;
+  }
+}
+
+@media (min-width: 824px) {
+  body main .gallery-desktop .bg {
+    background-position: 0rem;
+  }
+}
+
+body main .gallery-desktop .slider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5rem;
+  margin: 0 2rem;
+}
+
+body main .gallery-desktop .slider .slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+}
+
+body main .gallery-desktop .slider .slides img {
+  width: 11rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body main .gallery-desktop .slider .slides img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 0 1px 2px #256580;
+          box-shadow: 0 0 1px 2px #256580;
+}
+
+body main .gallery-desktop .slider .slides img.selected {
+  -webkit-box-shadow: 0 0 1px 2px #256580;
+          box-shadow: 0 0 1px 2px #256580;
+}
+
+body main .gallery-desktop .logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2rem;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  body main .gallery-desktop .logo {
+    display: block;
+  }
+}
+
+body main .gallery-desktop .logo img {
+  width: 19rem;
+}
+
+body main .gallery-mobile {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  body main .gallery-mobile {
+    display: none;
+  }
+}
+
+body main .gallery-mobile .bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .gallery-mobile .bg img {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  border-radius: 0.8rem;
+  margin: 1rem;
+  width: 90%;
+}
+
+body main .gallery-mobile .bg img::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.1) -webkit-gradient(linear, left bottom, left top, from(black), to(transparent));
+  background: rgba(0, 0, 0, 0.1) linear-gradient(to top, black, transparent);
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+@media (min-width: 425px) {
+  body main .gallery-mobile .bg {
+    background-position: -16rem;
+  }
+}
+
+@media (min-width: 695px) {
+  body main .gallery-mobile .bg {
+    background-position: -8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  body main .gallery-mobile .bg {
+    background-position: -1rem;
+  }
+}
+
+@media (min-width: 824px) {
+  body main .gallery-mobile .bg {
+    background-position: 0rem;
+  }
+}
+
+body main .trailer {
+  position: relative;
+}
+
+body main .trailer .video {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .trailer .video iframe {
+  width: 100%;
+  height: 20rem;
+  margin: 1rem;
+  -webkit-box-shadow: 0 0 1px 2px #256580;
+          box-shadow: 0 0 1px 2px #256580;
+  border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+  body main .trailer .video iframe {
+    width: 55rem;
+    height: 31rem;
+    padding: 1.5rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
