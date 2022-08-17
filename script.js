@@ -58,7 +58,7 @@ slides.forEach((slide) => {
     resetSlides(slides, "selected");
 
     const img = slide.src.split("images/")[1];
-    mainSlide.style.background = `url(..god-of-war-ragnarok-landing-page/images/${img})`;
+    mainSlide.style.background = `url(images/${img})`;
     mainSlide.style.backgroundSize = `cover`;
     mainSlide.style.backgroundRepeat = `no-repeat`;
     mainSlide.style.backgroundPosition = `0rem`;
