@@ -25,6 +25,7 @@ const resetClasses = (item) => {
 
 window.addEventListener("scroll", () => {
   const desktopLis = document.querySelectorAll(".desktop-menu nav li");
+  console.log(scrollY)
 
   if (scrollY < 2630) {
     resetClasses(navLis);
