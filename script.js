@@ -23,31 +23,7 @@ const resetClasses = (item) => {
   });
 };
 
-window.addEventListener("scroll", () => {
-  const desktopLis = document.querySelectorAll(".desktop-menu nav li");
-  console.log(scrollY)
 
-  if (scrollY < 2630) {
-    resetClasses(navLis);
-    desktopLis[4].classList.add("active");
-  }
-  if (scrollY < 2030) {
-    resetClasses(navLis);
-    desktopLis[3].classList.add("active");
-  }
-  if (scrollY < 1330) {
-    resetClasses(navLis);
-    desktopLis[2].classList.add("active");
-  }
-  if (scrollY < 730) {
-    resetClasses(navLis);
-    desktopLis[1].classList.add("active");
-  }
-  if (scrollY < 30) {
-    resetClasses(navLis);
-    desktopLis[0].classList.add("active");
-  }
-});
 
 // navegation gallery
 
