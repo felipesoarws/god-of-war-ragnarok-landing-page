@@ -50,8 +50,7 @@ const cardsDescriptions = document.querySelectorAll(".content-desc .desc");
 
 cards.forEach((card) => {
   card.addEventListener("click", () => {
-    console.log(card.classList[1]);
-    console.log(cardsDescriptions);
+    
     switch (card.classList[1]) {
       case "kratos":
         changeCard(
@@ -102,21 +101,7 @@ const changeCard = (img, source, desc, card) => {
   addClass(desc, "visible");
 };
 
-// geral functions
 
-const removeClass = (item, classToRemove) => {
-  item.classList.remove(classToRemove);
-};
-
-const addClass = (item, classToAdd) => {
-  item.classList.add(classToAdd);
-};
-
-const resetClasses = (item, act) => {
-  item.forEach((i) => {
-    i.classList.remove(act);
-  });
-};
 
 // mobile cast slider
 
@@ -139,3 +124,19 @@ new Glider($simpleCarousel, {
     },
   ],
 });
+
+// geral functions
+
+const removeClass = (item, classToRemove) => {
+  item.classList.remove(classToRemove);
+};
+
+const addClass = (item, classToAdd) => {
+  item.classList.add(classToAdd);
+};
+
+const resetClasses = (item, act) => {
+  item.forEach((i) => {
+    i.classList.remove(act);
+  });
+};
