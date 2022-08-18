@@ -194,7 +194,7 @@ body .desktop-menu nav ul li.active span.circle {
 
 body header {
   height: 100vh;
-  background: url(../images/home.png);
+  background: url(../images/home_mobile.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: -20rem;
@@ -228,6 +228,10 @@ body header::before {
 @media (min-width: 768px) {
   body header {
     background-position: -1rem;
+    background: url(../images/home_desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
   }
 }
 
@@ -546,7 +550,17 @@ body main .cast {
   position: relative;
 }
 
-body main .cast .bg {
+body main .cast-desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  body main .cast-desktop {
+    display: block;
+  }
+}
+
+body main .cast-desktop .bg {
   height: 100vh;
   background: url(../images/cast.jpg);
   background-size: cover;
@@ -557,7 +571,7 @@ body main .cast .bg {
           filter: blur(3px);
 }
 
-body main .cast .bg::before {
+body main .cast-desktop .bg::before {
   content: "";
   background: rgba(0, 0, 0, 0.3) -webkit-gradient(linear, left bottom, left top, from(black), to(transparent));
   background: rgba(0, 0, 0, 0.3) linear-gradient(to top, black, transparent);
@@ -570,40 +584,40 @@ body main .cast .bg::before {
 }
 
 @media (min-width: 425px) {
-  body main .cast .bg {
+  body main .cast-desktop .bg {
     background-position: -16rem;
   }
 }
 
 @media (min-width: 695px) {
-  body main .cast .bg {
+  body main .cast-desktop .bg {
     background-position: -8rem;
   }
 }
 
 @media (min-width: 768px) {
-  body main .cast .bg {
+  body main .cast-desktop .bg {
     background-position: -1rem;
   }
 }
 
 @media (min-width: 824px) {
-  body main .cast .bg {
+  body main .cast-desktop .bg {
     background-position: 0rem;
   }
 }
 
-body main .cast .kratos {
+body main .cast-desktop .kratos {
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-body main .cast .kratos img {
+body main .cast-desktop .kratos img {
   width: 40rem;
 }
 
-body main .cast-content {
+body main .cast-desktop-content {
   text-align: justify;
   position: absolute;
   margin: 1rem;
@@ -611,14 +625,14 @@ body main .cast-content {
 }
 
 @media (min-width: 768px) {
-  body main .cast-content {
+  body main .cast-desktop-content {
     top: 40vh;
     margin: 0 4rem;
   }
 }
 
 @media (min-width: 1024px) {
-  body main .cast-content {
+  body main .cast-desktop-content {
     top: 39vh;
     width: 43rem;
     left: 6rem;
@@ -626,9 +640,19 @@ body main .cast-content {
   }
 }
 
-body main .cast-content p {
+body main .cast-desktop-content p {
   font-size: 0.8rem;
   line-height: 2;
   font-family: "Montserrat", sans-serif;
+}
+
+body main .cast-mobile {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  body main .cast-mobile {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

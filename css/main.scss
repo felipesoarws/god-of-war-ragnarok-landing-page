@@ -154,7 +154,7 @@ body {
 
     header {
         height: 100vh;
-        background: url(../images/home.png);
+        background: url(../images/home_mobile.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: -20rem;
@@ -181,6 +181,10 @@ body {
 
         @media (min-width: 768px) {
             background-position: -1rem;
+            background: url(../images/home_desktop.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
         }
 
         @media (min-width: 824px) {
@@ -425,74 +429,90 @@ body {
 
         .cast {
             position: relative;
-            .bg {
-                height: 100vh;
-                background: url(../images/cast.jpg);
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: -20rem;
-                position: relative;
-                filter: blur(3px);
 
-                &::before {
-                    content: "";
-                    background: rgba(0, 0, 0, 0.3) linear-gradient(to top, black, transparent);
-                    width: 100%;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    position: absolute;
-                }
-
-                @media (min-width: 425px) {
-                    background-position: -16rem;
-                }
-
-                @media (min-width: 695px) {
-                    background-position: -8rem;
-                }
-
-                @media (min-width: 768px) {
-                    background-position: -1rem;
-                }
-
-                @media (min-width: 824px) {
-                    background-position: 0rem;
-                }
-            }
-
-            .kratos {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-
-                img {
-                    width: 40rem;
-                }
-            }
-
-            &-content {
-                text-align: justify;
-                position: absolute;
-                margin: 1rem;
-                top: 5rem;
-                @media (min-width: 768px) {
-                    top: 40vh;
-                    margin: 0 4rem;
-                }
+            &-desktop {
+                display: none;
 
                 @media (min-width: 1024px) {
-                    top: 39vh;
-                    width: 43rem;
-                    left: 6rem;
-                    margin: 0;
+                    display: block;
+                }
+                .bg {
+                    height: 100vh;
+                    background: url(../images/cast.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: -20rem;
+                    position: relative;
+                    filter: blur(3px);
+
+                    &::before {
+                        content: "";
+                        background: rgba(0, 0, 0, 0.3) linear-gradient(to top, black, transparent);
+                        width: 100%;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        position: absolute;
+                    }
+
+                    @media (min-width: 425px) {
+                        background-position: -16rem;
+                    }
+
+                    @media (min-width: 695px) {
+                        background-position: -8rem;
+                    }
+
+                    @media (min-width: 768px) {
+                        background-position: -1rem;
+                    }
+
+                    @media (min-width: 824px) {
+                        background-position: 0rem;
+                    }
                 }
 
-                p {
-                    font-size: 0.8rem;
-                    line-height: 2;
-                    font-family: "Montserrat", sans-serif;
+                .kratos {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+
+                    img {
+                        width: 40rem;
+                    }
+                }
+
+                &-content {
+                    text-align: justify;
+                    position: absolute;
+                    margin: 1rem;
+                    top: 5rem;
+                    @media (min-width: 768px) {
+                        top: 40vh;
+                        margin: 0 4rem;
+                    }
+
+                    @media (min-width: 1024px) {
+                        top: 39vh;
+                        width: 43rem;
+                        left: 6rem;
+                        margin: 0;
+                    }
+
+                    p {
+                        font-size: 0.8rem;
+                        line-height: 2;
+                        font-family: "Montserrat", sans-serif;
+                    }
+                }
+            }
+
+            &-mobile {
+                display: block;
+
+                @media (min-width: 1024px) {
+                    display: none;
                 }
             }
         }
