@@ -1,12 +1,20 @@
 // menu navegation
-
-const navLis = document.querySelectorAll("nav li");
+const logo = document.querySelector(".desktop-menu .logo img");
+const navLis = document.querySelectorAll(".desktop-menu nav li");
 
 navLis.forEach((li) => {
   li.addEventListener("click", () => {
     resetClasses(navLis, "active");
     addClass(li, "active");
   });
+});
+
+window.addEventListener("scroll", () => {
+  if (scrollY > 300) {
+    logo.style.opacity = "1";
+  } else {
+    logo.style.opacity = "0";
+  }
 });
 
 // gallery navegation

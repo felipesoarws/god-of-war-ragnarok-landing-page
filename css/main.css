@@ -110,6 +110,28 @@ body .desktop-menu {
   z-index: 10;
 }
 
+body .desktop-menu .logo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 2rem;
+  display: none;
+  z-index: 100;
+}
+
+@media (min-width: 768px) {
+  body .desktop-menu .logo {
+    display: block;
+  }
+}
+
+body .desktop-menu .logo img {
+  width: 10vw;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 @media (min-width: 1024px) {
   body .desktop-menu {
     display: block;
@@ -153,6 +175,16 @@ body .desktop-menu nav ul li {
 }
 
 body .desktop-menu nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 0.5rem;
   color: #7a808a;
   font-size: 0.95rem;
   font-size: 1vw;
@@ -427,24 +459,6 @@ body main .gallery-desktop .slider .slides img:hover {
 body main .gallery-desktop .slider .slides img.selected {
   -webkit-box-shadow: 0 0 1px 2px #256580;
           box-shadow: 0 0 1px 2px #256580;
-}
-
-body main .gallery-desktop .logo {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 2rem;
-  display: none;
-}
-
-@media (min-width: 1024px) {
-  body main .gallery-desktop .logo {
-    display: block;
-  }
-}
-
-body main .gallery-desktop .logo img {
-  width: 19vw;
 }
 
 body main .gallery-mobile {
@@ -914,5 +928,42 @@ body main .cast-mobile .cast-slider .slides .card .card-border .details span.mid
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   background-color: #c2c4cd;
+}
+
+body footer {
+  padding: 3rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1rem;
+  text-align: center;
+}
+
+body footer p,
+body footer a,
+body footer span {
+  font-family: "Montserrat", sans-serif;
+  text-transform: lowercase;
+}
+
+body footer span {
+  display: block;
+}
+
+body footer a {
+  color: #256580;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+body footer a:hover {
+  color: #3a8eb3;
 }
 /*# sourceMappingURL=main.css.map */

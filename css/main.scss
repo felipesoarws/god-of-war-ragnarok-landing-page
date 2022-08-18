@@ -87,6 +87,25 @@ body {
         right: 1rem;
         z-index: 10;
 
+        .logo {
+            position: fixed;
+            top: 0;
+            right: 0;
+            margin: 2rem;
+            display: none;
+            z-index: 100;
+
+            @media (min-width: 768px) {
+                display: block;
+            }
+
+            img {
+                width: 10vw;
+                opacity: 0;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
         @media (min-width: 1024px) {
             display: block;
             visibility: visible;
@@ -109,6 +128,10 @@ body {
                     cursor: pointer;
 
                     a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        gap: 0.5rem;
                         color: #7a808a;
                         font-size: 0.95rem;
                         font-size: 1vw;
@@ -336,22 +359,6 @@ body {
                                 box-shadow: 0 0 1px 2px #256580;
                             }
                         }
-                    }
-                }
-
-                .logo {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    margin: 2rem;
-                    display: none;
-
-                    @media (min-width: 1024px) {
-                        display: block;
-                    }
-
-                    img {
-                        width: 19vw;
                     }
                 }
             }
@@ -716,6 +723,36 @@ body {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    footer {
+        padding: 3rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        text-align: center;
+
+        p,
+        a,
+        span {
+            font-family: "Montserrat", sans-serif;
+            text-transform: lowercase;
+        }
+
+        span {
+            display: block;
+        }
+
+        a {
+            color: #256580;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                color: #3a8eb3;
             }
         }
     }
