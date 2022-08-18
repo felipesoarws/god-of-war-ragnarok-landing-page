@@ -685,6 +685,7 @@ body main .cast-desktop .cast-characters {
 body main .cast-desktop .cast-characters .characters-image {
   border: 3px double black;
   border-radius: 1rem;
+  overflow: hidden;
 }
 
 body main .cast-desktop .cast-characters .characters-image img {

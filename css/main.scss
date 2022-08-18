@@ -530,6 +530,7 @@ body {
                     .characters-image {
                         border: 3px double black;
                         border-radius: 1rem;
+                        overflow: hidden;
 
                         img {
                             width: 40vw;
