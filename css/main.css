@@ -155,6 +155,7 @@ body .desktop-menu nav ul li {
 body .desktop-menu nav ul li a {
   color: #7a808a;
   font-size: 0.95rem;
+  font-size: 1vw;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -167,16 +168,16 @@ body .desktop-menu nav ul li span {
 
 body .desktop-menu nav ul li span.line {
   background-color: #7a808a;
-  width: 1rem;
+  width: 1vw;
   height: 0.1rem;
   border-radius: 0.8rem;
 }
 
 body .desktop-menu nav ul li span.circle {
   border: 1px solid #7a808a;
-  width: 0.8rem;
-  height: 0.8rem;
-  border-radius: 0.8rem;
+  width: 0.8vw;
+  height: 0.8vw;
+  border-radius: 50%;
 }
 
 body .desktop-menu nav ul li.active a {
@@ -309,7 +310,7 @@ body main .synopsis-content {
 @media (min-width: 1024px) {
   body main .synopsis-content {
     top: 39vh;
-    width: 43rem;
+    width: 50vw;
     left: 6rem;
     margin: 0;
   }
@@ -319,6 +320,12 @@ body main .synopsis-content p {
   font-size: 0.8rem;
   line-height: 2;
   font-family: "Montserrat", sans-serif;
+}
+
+@media (min-width: 1024px) {
+  body main .synopsis-content p {
+    font-size: 0.9vw;
+  }
 }
 
 body main .gallery-desktop {
@@ -403,7 +410,7 @@ body main .gallery-desktop .slider .slides {
 }
 
 body main .gallery-desktop .slider .slides img {
-  width: 11rem;
+  width: 14vw;
   cursor: pointer;
   border-radius: 0.3rem;
   -webkit-transition: all 0.3s ease-in-out;
@@ -437,7 +444,7 @@ body main .gallery-desktop .logo {
 }
 
 body main .gallery-desktop .logo img {
-  width: 19rem;
+  width: 19vw;
 }
 
 body main .gallery-mobile {
@@ -533,8 +540,7 @@ body main .trailer .video iframe {
   width: 100%;
   height: 20rem;
   margin: 1rem;
-  -webkit-box-shadow: 0 0 1px 2px #256580;
-          box-shadow: 0 0 1px 2px #256580;
+  border: 3px double #256580;
   border-radius: 1rem;
 }
 
@@ -542,6 +548,14 @@ body main .trailer .video iframe {
   body main .trailer .video iframe {
     width: 55rem;
     height: 31rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body main .trailer .video iframe {
+    width: 60vw;
+    height: 80vh;
     padding: 1.5rem;
   }
 }
@@ -607,43 +621,192 @@ body main .cast-desktop .bg::before {
   }
 }
 
-body main .cast-desktop .kratos {
+body main .cast-desktop .cast-characters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
-  bottom: 0;
   left: 0;
+  bottom: 0;
+  top: 0;
+  right: 5rem;
+  gap: 2rem;
 }
 
-body main .cast-desktop .kratos img {
-  width: 40rem;
+body main .cast-desktop .cast-characters .characters-image {
+  border: 3px double black;
+  border-radius: 1rem;
 }
 
-body main .cast-desktop-content {
+body main .cast-desktop .cast-characters .characters-image img {
+  width: 40vw;
+  -webkit-transform: translateY(0.4rem);
+          transform: translateY(0.4rem);
+  -webkit-filter: drop-shadow(8px 1px 2px black);
+          filter: drop-shadow(8px 1px 2px black);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body main .cast-desktop .cast-characters .characters-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 39vw;
+  gap: 2vh;
+}
+
+body main .cast-desktop .cast-characters .characters-content .content-desc {
   text-align: justify;
-  position: absolute;
-  margin: 1rem;
-  top: 5rem;
+  height: 50vh;
 }
 
-@media (min-width: 768px) {
-  body main .cast-desktop-content {
-    top: 40vh;
-    margin: 0 4rem;
-  }
+body main .cast-desktop .cast-characters .characters-content .content-desc p {
+  margin: 1.2rem 0;
+  line-height: 2;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media (min-width: 1024px) {
-  body main .cast-desktop-content {
-    top: 39vh;
-    width: 43rem;
-    left: 6rem;
-    margin: 0;
+  body main .cast-desktop .cast-characters .characters-content .content-desc p {
+    font-size: 0.9vw;
   }
 }
 
-body main .cast-desktop-content p {
-  font-size: 0.8rem;
-  line-height: 2;
-  font-family: "Montserrat", sans-serif;
+body main .cast-desktop .cast-characters .characters-content .content-desc .desc {
+  display: none;
+}
+
+body main .cast-desktop .cast-characters .characters-content .content-desc .desc.visible {
+  display: block;
+}
+
+body main .cast-desktop .cast-characters .characters-content .content-characters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2vw;
+}
+
+body main .cast-desktop .cast-characters .characters-content .content-characters .card {
+  cursor: pointer;
+  width: 8vw;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body main .cast-desktop .cast-characters .characters-content .content-characters .card img {
+  -webkit-transform: translateY(0.4rem);
+          transform: translateY(0.4rem);
+  width: 8vw;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body main .cast-desktop .cast-characters .characters-content .content-characters .card .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+body main .cast-desktop .cast-characters .characters-content .content-characters .card .details span {
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body main .cast-desktop .cast-characters .characters-content .content-characters .card .details span.line {
+  background-color: #c2c4cd;
+  width: 2vw;
+  height: 0.2rem;
+  display: none;
+}
+
+body main .cast-desktop .cast-characters .characters-content .content-characters .card .details span.middle {
+  border: 1.6px solid #c2c4cd;
+  width: 0.9vw;
+  height: 0.9vw;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body main .cast-desktop .cast-characters .characters-content .content-characters .card.active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body main .cast-desktop .cast-characters .characters-content .content-characters .card.active img {
+  -webkit-transform: translateY(0.4rem);
+          transform: translateY(0.4rem);
+  border: 2px solid #c2c4cd;
+  background: rgba(19, 23, 29, 0.2);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+body main .cast-desktop .cast-characters .characters-content .content-characters .card.active .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+body main .cast-desktop .cast-characters .characters-content .content-characters .card.active .details span {
+  display: block;
+}
+
+body main .cast-desktop .cast-characters .characters-content .content-characters .card.active .details span.line {
+  background-color: #c2c4cd;
+  width: 2vw;
+  height: 0.2rem;
+  display: block;
+}
+
+body main .cast-desktop .cast-characters .characters-content .content-characters .card.active .details span.middle {
+  width: 0.9vw;
+  height: 0.9vw;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #c2c4cd;
 }
 
 body main .cast-mobile {
