@@ -417,11 +417,53 @@ body {
         .trailer {
             position: relative;
 
+            .bg {
+                height: 100vh;
+                background: url(../images/trailer.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: -20rem;
+                position: relative;
+                transition: all 0.3s ease-in-out;
+                filter: blur(3px);
+
+                &::before {
+                    content: "";
+                    background: rgba(0, 0, 0, 0.5) linear-gradient(to top, black, transparent);
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    position: absolute;
+                }
+
+                @media (min-width: 425px) {
+                    background-position: -16rem;
+                }
+
+                @media (min-width: 695px) {
+                    background-position: -8rem;
+                }
+
+                @media (min-width: 768px) {
+                    background-position: -1rem;
+                }
+
+                @media (min-width: 824px) {
+                    background-position: 0rem;
+                }
+            }
             .video {
                 height: 100vh;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
 
                 iframe {
                     width: 100%;
