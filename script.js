@@ -109,3 +109,25 @@ const resetClasses = (item, act) => {
     i.classList.remove(act);
   });
 };
+
+// mobile cast slider
+
+const $simpleCarousel = document.querySelector(
+  ".cast-mobile .cast-slider .slides"
+);
+
+new Glider($simpleCarousel, {
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  draggable: true,
+  scrollLock: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+  ],
+});

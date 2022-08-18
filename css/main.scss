@@ -452,7 +452,7 @@ body {
                     background: url(../images/cast.jpg);
                     background-size: cover;
                     background-repeat: no-repeat;
-                    background-position: -20rem;
+
                     position: relative;
                     filter: blur(3px);
 
@@ -465,22 +465,6 @@ body {
                         right: 0;
                         bottom: 0;
                         position: absolute;
-                    }
-
-                    @media (min-width: 425px) {
-                        background-position: -16rem;
-                    }
-
-                    @media (min-width: 695px) {
-                        background-position: -8rem;
-                    }
-
-                    @media (min-width: 768px) {
-                        background-position: -1rem;
-                    }
-
-                    @media (min-width: 824px) {
-                        background-position: 0rem;
                     }
                 }
 
@@ -604,7 +588,7 @@ body {
                                             &.line {
                                                 background-color: #c2c4cd;
                                                 width: 2vw;
-                                                height: 0.2rem;
+                                                height: 0.1rem;
                                                 display: block;
                                             }
 
@@ -628,6 +612,109 @@ body {
 
                 @media (min-width: 1024px) {
                     display: none;
+                }
+
+                .bg {
+                    height: 110vh;
+                    background: url(../images/cast.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    filter: blur(2px);
+
+                    @media (min-width: 375px) {
+                        height: 100vh;
+                    }
+
+                    &::before {
+                        content: "";
+                        background: rgba(0, 0, 0, 0.2);
+                        width: 100%;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        position: absolute;
+                    }
+                }
+
+                .cast-slider {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+
+                    button {
+                        border: 0;
+                        outline: 0;
+                        font-size: 2rem;
+                        color: #c2c4cd;
+                        background: transparent;
+                        padding: 0.8rem;
+                    }
+
+                    .slides {
+                        .card {
+                            margin: 0.5rem 1rem;
+                            text-align: justify;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+
+                            p {
+                                margin: 1.2rem 0;
+                                line-height: 1.2;
+                                font-size: 0.8rem;
+                                font-family: "Montserrat", sans-serif;
+                            }
+
+                            .desc {
+                                height: 70vh;
+
+                                @media (min-width: 375px) {
+                                    height: 60vh;
+                                }
+                            }
+
+                            .card-border {
+                                img {
+                                    transform: translateY(0.4rem);
+                                    border: 2px solid #c2c4cd;
+                                    background: rgba(19, 23, 29, 0.2);
+                                    filter: grayscale(0%);
+                                    width: 7rem;
+                                }
+
+                                .details {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    gap: 0.6rem;
+                                    margin-top: 0.5rem;
+
+                                    span {
+                                        display: block;
+
+                                        &.line {
+                                            background-color: #c2c4cd;
+                                            width: 2rem;
+                                            height: 0.1rem;
+                                            display: block;
+                                        }
+
+                                        &.middle {
+                                            width: 0.92rem;
+                                            height: 0.92rem;
+                                            transform: rotate(45deg);
+                                            background-color: #c2c4cd;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

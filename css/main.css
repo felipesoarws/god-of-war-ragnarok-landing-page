@@ -579,7 +579,6 @@ body main .cast-desktop .bg {
   background: url(../images/cast.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: -20rem;
   position: relative;
   -webkit-filter: blur(3px);
           filter: blur(3px);
@@ -595,30 +594,6 @@ body main .cast-desktop .bg::before {
   right: 0;
   bottom: 0;
   position: absolute;
-}
-
-@media (min-width: 425px) {
-  body main .cast-desktop .bg {
-    background-position: -16rem;
-  }
-}
-
-@media (min-width: 695px) {
-  body main .cast-desktop .bg {
-    background-position: -8rem;
-  }
-}
-
-@media (min-width: 768px) {
-  body main .cast-desktop .bg {
-    background-position: -1rem;
-  }
-}
-
-@media (min-width: 824px) {
-  body main .cast-desktop .bg {
-    background-position: 0rem;
-  }
 }
 
 body main .cast-desktop .cast-characters {
@@ -797,7 +772,7 @@ body main .cast-desktop .cast-characters .characters-content .content-characters
 body main .cast-desktop .cast-characters .characters-content .content-characters .card.active .details span.line {
   background-color: #c2c4cd;
   width: 2vw;
-  height: 0.2rem;
+  height: 0.1rem;
   display: block;
 }
 
@@ -817,5 +792,127 @@ body main .cast-mobile {
   body main .cast-mobile {
     display: none;
   }
+}
+
+body main .cast-mobile .bg {
+  height: 110vh;
+  background: url(../images/cast.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+@media (min-width: 375px) {
+  body main .cast-mobile .bg {
+    height: 100vh;
+  }
+}
+
+body main .cast-mobile .bg::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+body main .cast-mobile .cast-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+body main .cast-mobile .cast-slider button {
+  border: 0;
+  outline: 0;
+  font-size: 2rem;
+  color: #c2c4cd;
+  background: transparent;
+  padding: 0.8rem;
+}
+
+body main .cast-mobile .cast-slider .slides .card {
+  margin: 0.5rem 1rem;
+  text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .cast-mobile .cast-slider .slides .card p {
+  margin: 1.2rem 0;
+  line-height: 1.2;
+  font-size: 0.8rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+body main .cast-mobile .cast-slider .slides .card .desc {
+  height: 70vh;
+}
+
+@media (min-width: 375px) {
+  body main .cast-mobile .cast-slider .slides .card .desc {
+    height: 60vh;
+  }
+}
+
+body main .cast-mobile .cast-slider .slides .card .card-border img {
+  -webkit-transform: translateY(0.4rem);
+          transform: translateY(0.4rem);
+  border: 2px solid #c2c4cd;
+  background: rgba(19, 23, 29, 0.2);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  width: 7rem;
+}
+
+body main .cast-mobile .cast-slider .slides .card .card-border .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+body main .cast-mobile .cast-slider .slides .card .card-border .details span {
+  display: block;
+}
+
+body main .cast-mobile .cast-slider .slides .card .card-border .details span.line {
+  background-color: #c2c4cd;
+  width: 2rem;
+  height: 0.1rem;
+  display: block;
+}
+
+body main .cast-mobile .cast-slider .slides .card .card-border .details span.middle {
+  width: 0.92rem;
+  height: 0.92rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #c2c4cd;
 }
 /*# sourceMappingURL=main.css.map */
